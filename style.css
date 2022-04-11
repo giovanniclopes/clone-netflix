@@ -55,6 +55,7 @@ nav {
 }
 
 #language-selection {
+    width: 120px;
     padding: 5px 10px 0px 10px;
     background: transparent;
     color: var(--color4);
@@ -495,6 +496,8 @@ nav {
 /* footer */
 
 footer {
+    display: flex;
+    flex-direction: column;
     padding: 50px 200px;
     border-top: 6px solid var(--color3);
     background: var(--color1);
@@ -520,4 +523,10 @@ footer a {
 
 footer a:hover {
     color: var(--color2);
+}
+
+@media (max-width: 600px) {
+    footer {
+        padding: 40px;
+    }
 }
