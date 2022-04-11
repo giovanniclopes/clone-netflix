@@ -5,7 +5,7 @@
     --color2: #E50914;
     --color3: #303030;
     --color4: #FFFFFF;
-    --font1: 'Martel Sans', sans-serif;
+    --font1: 'Martel Sans', Helvetica, sans-serif;
 }
 
 * {
@@ -153,6 +153,7 @@ nav {
 
 #first-section-form input[type=email]:focus {
     font: 600 1.2em var(--font1);
+    outline: 1px solid var(--color2);
 }
 
 #btn-div-submit {
@@ -402,6 +403,8 @@ nav {
 
 #fourth-section h3 {
     font: 800 3em var(--font1);
+    line-height: 60px;
+    margin-bottom: 15px;
 }
 
 #fourth-section p {
@@ -446,4 +449,75 @@ nav {
         top: 25px;
         right: 290px;
     }
+}
+
+/* fifth section */
+
+#fifth-section {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+    gap: 30px;
+    padding: 60px 80px;
+    background: var(--color1);
+    color: var(--color4);
+    border-top: 6px solid var(--color3);
+}
+
+#fifth-section h3 {
+    font: 800 3em var(--font1);
+    line-height: 60px;
+    margin-bottom: 15px;
+}
+
+#fifth-section p {
+    font: 600 1.5em var(--font1);
+    line-height: 35px;
+}
+
+@media (max-width: 600px) {
+    #fifth-section {
+        display: flex;
+        padding-top: 80px;
+        flex-direction: column-reverse;
+        text-align: center;
+    }
+    #fifth-section h3 {
+        font: 800 2em var(--font1);
+    }
+    
+    #fifth-section p {
+        font: 600 1.2em var(--font1);
+        line-height: 35px;
+    }   
+}
+
+/* footer */
+
+footer {
+    padding: 50px 200px;
+    border-top: 6px solid var(--color3);
+    background: var(--color1);
+}
+
+footer h4 {
+    font: 700 .9em var(--font1);
+    color: #757575;
+}
+
+.footer-items {
+    margin: 25px 0;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+}
+
+footer a {
+    color: #757575;
+    font: normal .8em var(--font1);
+    text-decoration: none;
+    transition: .4s;
+}
+
+footer a:hover {
+    color: var(--color2);
 }
