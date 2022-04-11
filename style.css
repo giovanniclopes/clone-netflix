@@ -26,9 +26,14 @@
 
 body {
     background: url(images/background1.webp) no-repeat;
-    background-size: cover;
+    background-size: contain;
 }
 
+@media (max-width: 600px) {
+    body {
+        background-size: cover;
+    }
+}
 header {
     padding: 25px 35px;
     background: linear-gradient(to bottom, rgba(0, 0, 0, 0.76), transparent);
@@ -65,7 +70,7 @@ nav {
 }
 
 .login-nav {
-    padding: 8px 27px 6px 27px;
+    padding: 8px 27px 7px 27px;
     margin: 0 20px;
     font: normal 1em var(--font1);
     background: var(--color2);
@@ -73,6 +78,7 @@ nav {
     border: none;
     border-radius: 3px;
     outline: none;
+    cursor: pointer;
     transition: .4s;
 }
 
@@ -95,6 +101,7 @@ nav {
 
 #first-section {
     display: flex;
+    margin: 30px 0 130px 0;
     padding: 80px 0px 30px 0px;
     background: linear-gradient(180deg ,#00000017, #000000af, #000000af, #000000af, #00000021);
     flex-direction: column;
@@ -154,7 +161,13 @@ nav {
     padding-right: 15px;
     align-items: center;
     background: var(--color2);
+    cursor: pointer;
     transition: .4s;
+}
+
+#btn-div-submit input{
+    font: 600 1.2em var(--font1);
+    cursor: pointer;
 }
 
 #btn-div-submit:hover {
@@ -175,6 +188,7 @@ nav {
 #btn-div-submit img {
     width: 25px;
     height: 25px;
+    transition: .4s;
 }
 
 .btn-first-section {
@@ -208,7 +222,7 @@ nav {
     }
     #first-section {
         margin: 20px 0 100px 0;
-        padding: 50px 0px;
+        padding: 50px 40px;
     }
     #first-section-form {
         display: flex;
@@ -235,6 +249,7 @@ nav {
         color: var(--color4);
     }    
     #first-section-form input[type=email] {
+        margin-top: 20px;
         width: 400px;
         height: 30px;
         border-radius: 5px;
@@ -246,9 +261,32 @@ nav {
         display: flex;
         border-radius: 10px;
     }    
+    #btn-div-submit input {
+        border-radius: 10px;
+    }
+    
     .btn-first-section {
         font: 600 1.2em var(--font1);
         border-radius: 3px;
         padding: 10px 60px 6px 70px;
+    }
+}
+
+/* second section */
+
+#second-section {
+    display: grid;
+    gap: 30px;
+    padding: 60px 30px;
+    background: var(--color1);
+    color: var(--color4);
+    border-top: 6px solid var(--color3);
+    grid-template-columns: repeat(2, 1fr);
+}
+
+@media (max-width: 600px) {
+    #second-section {
+        display: flex;
+        flex-direction: column;
     }
 }
