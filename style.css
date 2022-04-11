@@ -15,6 +15,13 @@
     font-family: var(--font1);
 }
 
+*::selection {
+    background: var(--color2);
+    color: var(--color1);
+    border-radius: 10px;
+    text-shadow: 10px 10px 20px #ff9196;
+}
+
 /* menu */
 
 body {
@@ -64,10 +71,21 @@ nav {
     outline: none;
 }
 
+@media (max-width: 600px) {
+    header {
+        padding: 20px 0px;
+        background: linear-gradient(to bottom, #000000, #000000b6, transparent);
+    }
+    .logo {
+        width: 95px;
+    }
+}
+
+
 /* first section */
 
 #first-section {
-    margin: 100px 0;
+    margin: 100px 0 50px 0;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -137,46 +155,44 @@ nav {
 
 
 @media (max-width: 600px) {
+    #first-section-form {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }    
+    #first-section {
+        margin: 50px 0 100px 0;
+    }
     #first-section h1 {
         text-shadow: 5px 5px 20px rgb(0, 0, 0);
         width: 700px;
-        font: 800 2.1em var(--font1);
+        font: 800 1.8em var(--font1);
         color: var(--color4);
     }
-    
     #first-section h2 {
         text-shadow: 5px 5px 20px rgb(0, 0, 0);
         margin: 10px;
-        font: bold 1.6em var(--font1);
+        font: bold 1.2em var(--font1);
         color: var(--color4);
     }
-    
     #first-section p {
         text-shadow: 5px 5px 20px rgb(0, 0, 0);
         margin: 10px;
-        font: 400 1.2em var(--font1);
+        font: 400 1.1em var(--font1);
         color: var(--color4);
     }    
     #first-section-form input[type=email] {
-        width: 200px;
-        height: 40px;
-        padding: 10px;
-        border: none;
-        outline: none;
+        width: 400px;
+        height: 30px;
+        border-radius: 5px;
+        padding: 15px;
+        margin-bottom: 10px;
         transition: .4s;
     }
-    
     #first-section-form button {
-        display: flex;
-        height: 60px;
-        align-items: center;
-        padding: 10px 20px 6px 30px;
-        background: var(--color2);
         font: 600 1.2em var(--font1);
-        color: var(--color4);
-        border: none;
-        outline: none;
-        transition: .4s;
+        border-radius: 3px;
     }
     
 }
