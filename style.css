@@ -43,6 +43,10 @@ nav {
 .logo {
     width: 135px;
     margin: 10px 20px;
+    transition: .4s;
+}
+.logo:hover {
+    filter: brightness(75%);
 }
 
 #language-selection {
@@ -61,7 +65,7 @@ nav {
 }
 
 .login-nav {
-    padding: 7px 20px 5px 20px;
+    padding: 8px 27px 6px 27px;
     margin: 0 20px;
     font: normal 1em var(--font1);
     background: var(--color2);
@@ -69,6 +73,11 @@ nav {
     border: none;
     border-radius: 3px;
     outline: none;
+    transition: .4s;
+}
+
+.login-nav:hover {
+    filter: brightness(80%);
 }
 
 @media (max-width: 600px) {
@@ -85,24 +94,26 @@ nav {
 /* first section */
 
 #first-section {
-    margin: 100px 0 50px 0;
     display: flex;
+    padding: 80px 0px 30px 0px;
+    background: linear-gradient(180deg ,#00000017, #000000af, #000000af, #000000af, #00000021);
     flex-direction: column;
     align-items: center;
     text-align: center;
 }
 
 #first-section h1 {
-    text-shadow: 5px 5px 20px rgb(0, 0, 0);
+    text-shadow: 5px 5px 20px rgb(0 0 0);
     width: 700px;
     font: 800 3em var(--font1);
     color: var(--color4);
+    line-height: 60px;
 }
 
 #first-section h2 {
     text-shadow: 5px 5px 20px rgb(0, 0, 0);
     margin: 10px;
-    font: bold 1.8em var(--font1);
+    font: 600 1.7em var(--font1);
     color: var(--color4);
 }
 
@@ -119,6 +130,10 @@ nav {
     align-items: center;
 }
 
+#first-section-form form {
+    display: contents;
+}
+
 #first-section-form input[type=email] {
     border-radius: 10px 0px 0px 10px;
     width: 500px;
@@ -130,10 +145,39 @@ nav {
 }
 
 #first-section-form input[type=email]:focus {
-    font: 600 1.5em var(--font1);
+    font: 600 1.2em var(--font1);
 }
 
-#first-section-form button {
+#btn-div-submit {
+    display: flex;
+    border-radius: 0px 10px 10px 0px;
+    padding-right: 15px;
+    align-items: center;
+    background: var(--color2);
+    transition: .4s;
+}
+
+#btn-div-submit:hover {
+    filter: brightness(75%);
+}
+
+#btn-div-submit:focus {
+    filter: brightness(70%);
+    animation: btnAnimation .4s normal ease-in-out;
+}
+
+@keyframes btnAnimation {
+    0% { transform: translate(0, 5px); }
+    50%  { transform: translate(0, 5px); }
+    100%   { transform: translate(0, 0px)};
+}
+
+#btn-div-submit img {
+    width: 25px;
+    height: 25px;
+}
+
+.btn-first-section {
     display: flex;
     border-radius: 0px 10px 10px 0px;
     height: 60px;
@@ -147,7 +191,8 @@ nav {
     transition: .4s;
 }
 
-#first-section-form button::after {
+
+.btn-first-section::after {
     margin-top: 7px;
     margin-left: 5px;
     content: url(icons/right-arrow.png);
@@ -155,15 +200,22 @@ nav {
 
 
 @media (max-width: 600px) {
+    #first-section-form form {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    #first-section {
+        margin: 20px 0 100px 0;
+        padding: 50px 0px;
+    }
     #first-section-form {
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
     }    
-    #first-section {
-        margin: 50px 0 100px 0;
-    }
     #first-section h1 {
         text-shadow: 5px 5px 20px rgb(0, 0, 0);
         width: 700px;
@@ -190,9 +242,13 @@ nav {
         margin-bottom: 10px;
         transition: .4s;
     }
-    #first-section-form button {
+    #btn-div-submit {
+        display: flex;
+        border-radius: 10px;
+    }    
+    .btn-first-section {
         font: 600 1.2em var(--font1);
         border-radius: 3px;
+        padding: 10px 60px 6px 70px;
     }
-    
 }
