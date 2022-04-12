@@ -25,7 +25,7 @@
 /* menu */
 
 body {
-    background: url(images/background1.webp) no-repeat;
+    background: #000000 url(images/background1.webp) no-repeat;
     background-size: contain;
 }
 
@@ -89,6 +89,10 @@ nav {
 
 .login-nav:hover {
     filter: brightness(80%);
+}
+
+.login-nav a {
+    all: unset;
 }
 
 @media (max-width: 600px) {
@@ -562,6 +566,102 @@ nav {
         padding: 20px 20px;
     }
 }
+
+/* login page */
+
+#login-section {
+    display: flex;
+    justify-content: center;
+}
+
+.form-login {
+    max-width: 500px;
+    width: 100%;
+}
+
+#form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 60px 40px;
+    font: 600 1.2em var(--font1);
+    background: #000000c7;
+}
+
+#form h1 {
+    font: 600 1.7em var(--font1);
+    margin-bottom: 10px;
+    color: var(--color4);
+}
+
+#form p {
+    font: 600 .7em var(--font1);
+}
+
+.field {
+    padding: 7px 15px 5px 15px;
+    background: var(--color3);
+    font: normal 1.1em var(--font1);
+    color: var(--color4);
+    border: none;
+    border-radius: 5px;
+    outline: none;
+
+}
+
+.submit-btn {
+    padding: 12px 15px 10px 15px;
+    font: 600 1em var(--font1);
+    background: var(--color2);
+    color: var(--color4);
+    border: none;
+    border-radius: 5px;
+    outline: none;
+}
+
+.form-group {
+    display: grid;
+    align-items: center;
+    grid-template-columns: 1fr 1fr 1fr;
+    color: #b3b3b3;
+    margin: 15px 0;
+}
+
+.remember-text {
+    position: relative;
+    right: 120px;
+    cursor: default;
+}
+
+.remember-text label {
+    font: 600 .7em var(--font1);
+}
+
+.facebook-connect {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: #757575;
+    cursor: pointer;
+}
+
+.facebook-connect:before {
+    content: url(icons/facebook.png);
+}
+
+.form-group2 {
+    display: grid;
+    justify-content: space-between;
+    grid-template-columns: 1fr 1fr;
+    color: #757575;
+    margin: 15px auto;
+    gap: 30px;
+}
+
+.form-group2 p {
+    color: #757575;
+}
+
 
 /* footer */
 
