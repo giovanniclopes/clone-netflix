@@ -514,15 +514,19 @@ nav {
 }
 
 .accordion {
-    padding: 10px 25px;
+    padding: 15px 25px;
     width: 800px;
     text-align: left;
-    font: 500 1.6em var(--font1);
+    font: 600 1.6em var(--font1);
     border: none;
     outline: none;
     background: var(--color3);
     color: var(--color4);
     cursor: pointer;
+}
+
+.accordion:after {
+    content: url(icons/plus.png);
 }
 
 .panel {
