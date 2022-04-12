@@ -19,7 +19,7 @@
     background: var(--color2);
     color: var(--color1);
     border-radius: 10px;
-    text-shadow: 10px 10px 20px #ff9196;
+    text-shadow: 10px 10px 20px #ff91977a;
 }
 
 /* menu */
@@ -62,6 +62,10 @@ nav {
     font: normal 1em var(--font1);
     border: 1px solid var(--color4);
     border-radius: 3px;
+}
+
+#language-selection:focus {
+    border: 1px solid #757575;
 }
 
 #language-selection > option {
@@ -500,8 +504,9 @@ nav {
     flex-direction: column;
     align-items: center;
     gap: 15px;
-    padding: 60px 80px;
-    background: var(--color1);
+    padding: 110px 80px;
+    background: url(images/questions-bg.webp) center no-repeat fixed;
+    background-size: cover;
     color: var(--color4);
     border-top: 6px solid var(--color3);
 }
@@ -514,27 +519,48 @@ nav {
 }
 
 .accordion {
-    padding: 15px 25px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 25px 15px 25px;
     width: 800px;
     text-align: left;
     font: 600 1.6em var(--font1);
     border: none;
+    border-radius: 3px;
     outline: none;
     background: var(--color3);
     color: var(--color4);
     cursor: pointer;
+    transition: .5s;
+    box-shadow: 5px 5px 40px rgba(0, 0, 0, 0.616);
+}
+.accordion:focus {
+    animation: btnAnimation .3s normal;
 }
 
 .accordion:after {
     content: url(icons/plus.png);
+    margin-top: 10px;
 }
 
 .panel {
     display: none;
+    margin-top: -12px;
     font: 500 1.5em var(--font1);
     padding: 20px 40px;
     background: var(--color3);
     color: var(--color4);
+    border-radius: 3px;
+}
+
+@media (max-width: 600px) {
+    #questions {
+        padding: 110px 30px;
+    }
+    .panel {
+        padding: 20px 20px;
+    }
 }
 
 /* footer */
@@ -567,6 +593,7 @@ footer a {
 
 footer a:hover {
     color: var(--color2);
+    text-decoration: underline;
 }
 
 @media (max-width: 600px) {
