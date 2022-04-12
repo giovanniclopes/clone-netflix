@@ -711,3 +711,18 @@ footer a:hover {
         padding: 40px;
     }
 }
+
+/*copyright */
+
+.copyright {
+    text-align: center;
+    margin-top: 50px;
+    color: #757575;
+    transition: .4s;
+}
+
+.copyright:hover {
+    color: var(--color2);
+    text-decoration: underline;
+    cursor: default;
+}
