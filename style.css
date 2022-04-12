@@ -125,7 +125,7 @@ nav {
 #first-section h1 {
     text-shadow: 5px 5px 20px rgb(0 0 0);
     width: 700px;
-    font: 800 3em var(--font1);
+    font: 800 2.5em var(--font1);
     color: var(--color4);
     line-height: 60px;
 }
