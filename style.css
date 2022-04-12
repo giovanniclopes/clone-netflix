@@ -617,6 +617,16 @@ nav {
     border: none;
     border-radius: 5px;
     outline: none;
+    cursor: pointer;
+    transition: .4s;
+}
+
+.submit-btn:hover {
+    filter: brightness(75%);
+}
+
+.submit-btn:focus {
+    animation: btnAnimation .4s normal;
 }
 
 .form-group {
