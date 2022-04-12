@@ -21,8 +21,8 @@
         <div class="form-login">
             <form action="#" id="form" method="post">
                 <h1>Entrar</h1>
-                <input type="email" name="email" id="email" class="field" placeholder="Email ou número de telefone" required>
-                <input type="password" name="password" id="password" class="field" placeholder="Senha" required>
+                <input type="email" name="email" id="email" class="field" placeholder="Email ou número de telefone" oninvalid="this.setCustomValidity('Coloque um email válido, contendo arroba(@)')" oninput="setCustomValidity('')" required>
+                <input type="password" name="password" id="password" class="field" placeholder="Senha" oninvalid="this.setCustomValidity('Coloque uma senha contendo no mínimo 8 caractéres')" min="8" max="50" oninput="setCustomValidity('')" required>
                 <input type="submit" value="Entrar" class="submit-btn">
                 <div class="form-group">
                     <div>
