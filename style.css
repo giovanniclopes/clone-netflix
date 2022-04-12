@@ -91,6 +91,10 @@ nav {
     filter: brightness(80%);
 }
 
+.login-nav:focus {
+    animation: btnAnimation .4s normal;
+}
+
 .login-nav a {
     all: unset;
 }
@@ -606,7 +610,12 @@ nav {
     border: none;
     border-radius: 5px;
     outline: none;
+    transition: .1s;
 
+}
+
+.field:focus {
+    outline: 2px solid var(--color2);
 }
 
 .submit-btn {
