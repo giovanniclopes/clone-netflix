@@ -124,8 +124,8 @@ nav {
 
 #first-section h1 {
     text-shadow: 5px 5px 20px rgb(0 0 0);
-    width: 700px;
-    font: 800 2.5em var(--font1);
+    width: 600px;
+    font: 900 2.5em var(--font1);
     color: var(--color4);
     line-height: 60px;
 }
@@ -300,11 +300,11 @@ nav {
 }
 
 #second-section h3 {
-    font: 800 3em var(--font1);
+    font: 800 2.5em var(--font1);
 }
 
 #second-section p {
-    font: 600 1.5em var(--font1);
+    font: 600 1.3em var(--font1);
     line-height: 35px;
 }
 
@@ -361,13 +361,13 @@ nav {
 }
 
 #third-section h3 {
-    font: 800 3em var(--font1);
+    font: 800 2.5em var(--font1);
     line-height: 60px;
     margin-bottom: 15px;
 }
 
 #third-section p {
-    font: 600 1.5em var(--font1);
+    font: 600 1.3em var(--font1);
     line-height: 35px;
 }
 
@@ -415,13 +415,13 @@ nav {
 }
 
 #fourth-section h3 {
-    font: 800 3em var(--font1);
+    font: 800 2.5em var(--font1);
     line-height: 60px;
     margin-bottom: 15px;
 }
 
 #fourth-section p {
-    font: 600 1.5em var(--font1);
+    font: 600 1.3em var(--font1);
     line-height: 35px;
 }
 
@@ -478,13 +478,13 @@ nav {
 }
 
 #fifth-section h3 {
-    font: 800 3em var(--font1);
+    font: 800 2.5em var(--font1);
     line-height: 60px;
     margin-bottom: 15px;
 }
 
 #fifth-section p {
-    font: 600 1.5em var(--font1);
+    font: 600 1.3em var(--font1);
     line-height: 35px;
 }
 
